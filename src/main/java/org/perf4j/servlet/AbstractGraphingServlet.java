@@ -78,6 +78,12 @@ public abstract class AbstractGraphingServlet extends HttpServlet {
 
     /**
      * Helper method writes the HTML header, everything up to the opening body tag. Subclasses may wish to override.
+     *
+     * @param request HTTP servlet request
+     * @param response HTTP servlet response
+     *
+     * @throws ServletException If exception occurs while writing response
+     * @throws IOException If exception occurs while writing response
      */
     protected void writeHeader(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -99,6 +105,9 @@ public abstract class AbstractGraphingServlet extends HttpServlet {
      * @param chartGenerator the chart generator responsible for creating the chart URL
      * @param request        the incoming servlet request
      * @param response       the servlet respone
+     *
+     * @throws ServletException If exception occurs while writing response
+     * @throws IOException If exception occurs while writing response
      */
     protected void writeChart(String name,
                               StatisticsChartGenerator chartGenerator,
@@ -117,6 +126,12 @@ public abstract class AbstractGraphingServlet extends HttpServlet {
 
     /**
      * Helper method writes the HTML footer, closing the body and HTML tags. Subclasses may wish to override.
+     *
+     * @param request HTTP servlet request
+     * @param response HTTP servlet response
+     *
+     * @throws ServletException If exception occurs while writing response
+     * @throws IOException If exception occurs while writing response
      */
     protected void writeFooter(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

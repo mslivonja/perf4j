@@ -109,7 +109,7 @@ public class AcceptableRangeConfiguration implements Serializable, Cloneable {
      * Determines whether or not the specified value is within the acceptable range.
      *
      * @param value The value to check
-     * @return returns true if value >= minValue && value <= maxValue, false otherwise
+     * @return returns true if value &gt;= minValue &amp;&amp; value &lt;= maxValue, false otherwise
      */
     public boolean isInRange(double value) {
         return value >= minValue && value <= maxValue;

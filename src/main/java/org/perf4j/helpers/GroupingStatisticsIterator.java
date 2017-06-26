@@ -26,7 +26,7 @@ import java.util.NoSuchElementException;
  * each time slice detected. Thus, this iterator is a "gearing" iterator - if there are on average 100 StopWatches
  * logged during each time slice, the underlying StopWatchLogIterator will return 100 StopWatches for each single
  * GroupedTimingStatistics object returned by this Iterator.
- * <p/>
+ *
  * Note that it's assumed that the StopWatch Iterator is ordered according to start time. If this is not true, then
  * this class will create GroupedTimingStatistics that may reflect StopWatch data from a previous time slice.
  *

@@ -73,7 +73,7 @@ public @interface Profiled {
      * return value or exception thrown from the method (if any), and the object on which the method is being called.
      * An Expression Language expression is delimited with curly brackets, and arguments are accessed using the
      * following variable names:
-     * <p>
+     *
      * <ul>
      * <li>$0, $1, $2, $3, etc. - the parameters passed to the method in declaration order
      * <li>$this - the object whose method is being called - when a static class method is profiled, this
@@ -82,7 +82,7 @@ public @interface Profiled {
      * exception was thrown during method execution
      * <li>$exception - the value of any Throwable thrown by the method - will be null if the method returns normally
      * </ul>
-     * <p>
+     *
      * For example, suppose you want to profile the <tt>doGet()</tt> method of a servlet, with the tag name dependent
      * on the name of the servlet AND the path info (as returned by getPathInfo()) of the request.
      * You could create the following annotation:
@@ -125,7 +125,7 @@ public @interface Profiled {
      * Default is false. When set to true, normalSuffix and slowSuffix values are appended to tags
      * based on whether the tags' elapsed time &gt;= timeThreshold or not.
      * 
-     * @return
+     * @return Returns <code>true</code> if suffix is enabled, <code>false</code> otherwise.
      */
     boolean normalAndSlowSuffixesEnabled() default false;
 }

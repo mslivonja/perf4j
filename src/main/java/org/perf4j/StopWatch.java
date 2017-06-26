@@ -20,7 +20,7 @@ import java.io.Serializable;
 /**
  * The StopWatch class is used to time code blocks in Perf4J. The general usage pattern is to create a StopWatch
  * before a section of code that is to be timed and then stop it before it is passed to a logging method:
- * <p/>
+ *
  * <pre>
  * StopWatch stopWatch = new StopWatch();
  * try {
@@ -30,10 +30,10 @@ import java.io.Serializable;
  *     log.error(stopWatch.stop("methodBeingTimed.fail"), e);
  * }
  * </pre>
- * <p/>
+ *
  * Note that a StopWatch is reusable. That is, you can call <tt>start()</tt> and <tt>stop()</tt> in succession
  * and the <tt>getElapsedTime()</tt> method will refer to the time since the most recent <tt>start()</tt> call.
- * <p/>
+ *
  * In general, most clients will find it simpler and cleaner to use the {@link LoggingStopWatch} class or one of its
  * subclasses in preference to this class.
  *
@@ -231,7 +231,7 @@ public class StopWatch implements Serializable, Cloneable {
     /**
      * The lap method is useful when using a single StopWatch to time multiple consecutive blocks. It calls stop()
      * and then immediately calls start(), e.g.:
-     * <p/>
+     *
      * <pre>
      * StopWatch stopWatch = new StopWatch();
      * ...some code
@@ -254,7 +254,7 @@ public class StopWatch implements Serializable, Cloneable {
     /**
      * The lap method is useful when using a single StopWatch to time multiple consecutive blocks. It calls stop()
      * and then immediately calls start(), e.g.:
-     * <p/>
+     *
      * <pre>
      * StopWatch stopWatch = new StopWatch();
      * ...some code

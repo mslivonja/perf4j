@@ -33,7 +33,7 @@ import ch.qos.logback.core.spi.AppenderAttachableImpl;
  * This logback Appender groups StopWatch log messages together to form GroupedTimingStatistics. At a scheduled interval
  * the StopWatch log messages that currently exist in the buffer are pulled to create a single
  * GroupedTimingStatistics instance that is then sent to any attached appenders.
- * <p/>
+ *
  * Note that any LoggingEvents which do NOT contain StopWatch objects are discarded. Also, this appender stores logged
  * messages in a bounded buffer before sending those messages to downstream appenders. If the buffer becomes full then
  * subsequent logs will be discarded until the buffer has time to clear. You can access the number of discarded

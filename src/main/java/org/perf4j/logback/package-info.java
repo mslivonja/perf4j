@@ -114,7 +114,7 @@
  *        &lt;appender-ref ref="perf4jFileAppender"/&gt;
  *    &lt;/logger&gt;
  *&lt;/configuration&gt;
- * <pre>
+ * </pre>
  *
  * @see <a href="http://logback.qos.ch/">logback</a>
  */

@@ -99,7 +99,7 @@
  *     &lt;appender-ref ref="rolling"/&gt;
  *   &lt;/root&gt;
  * &lt;/log4j:configuration&gt;
- * <pre>
+ * </pre>
  *
  * @see <a href="http://logging.apache.org/log4j/1.2/index.html">log4j</a>
  */

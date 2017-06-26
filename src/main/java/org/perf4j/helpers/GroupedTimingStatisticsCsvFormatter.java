@@ -23,7 +23,7 @@ import java.util.Map;
 /**
  * This helper formatter class outputs {@link org.perf4j.GroupedTimingStatistics} in a comma-separated value format.
  * This class supports two main types of formats:
- * <p/>
+ *
  * <ul>
  * <li>Pivoted output, where each GroupedTimingStatistics is output as a single line. The client must specify
  * which tags from the GroupedTimingStatistics should have its values output.

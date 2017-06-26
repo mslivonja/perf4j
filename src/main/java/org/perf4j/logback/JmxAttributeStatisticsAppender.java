@@ -134,7 +134,7 @@ public class JmxAttributeStatisticsAppender extends AppenderBase<LoggingEvent> {
      * Suppose you wanted to have a JMX notification sent if the databaseCallMean is ever greater than 100ms, the
      * databaseCallMax is ever greater than 1000ms, the fileWriteMean is ever less than 5ms or greater than 200ms,
      * and the fileWriteTPS is ever less than 1 transaction per second. You would specify a NotificationThreshold as:
-     * <pre>databaseCallMean(<100),databaseCallMax(<1000),fileWriteMean(5-200),fileWriteTPS(>1)</pre>
+     * <pre>databaseCallMean(&lt;100),databaseCallMax(&lt;1000),fileWriteMean(5-200),fileWriteTPS(&gt;1)</pre>
      *
      * @return The value of the NotificationThresholds option
      */

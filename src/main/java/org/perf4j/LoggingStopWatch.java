@@ -41,13 +41,13 @@ public class LoggingStopWatch extends StopWatch {
     private boolean normalAndSlowSuffixesEnabled = false;
     
     /**
-     * If normalAndSlowSuffixesEnabled == true then this suffix will be appended to the tag for elapsedTimes < timeThreshold.
+     * If normalAndSlowSuffixesEnabled == true then this suffix will be appended to the tag for elapsedTimes &lt; timeThreshold.
      * If normalAndSlowSuffixesEnabled == true and timeThreshold == 0 then this suffix will ALWAYS be appended to the tag.
      */
     private String normalSuffix = ".normal";
     
     /**
-     * If normalAndSlowSuffixesEnabled == true then this suffix will be appended to the tag for elapsedTimes >= timeThreshold.
+     * If normalAndSlowSuffixesEnabled == true then this suffix will be appended to the tag for elapsedTimes &lt;= timeThreshold.
      * If normalAndSlowSuffixesEnabled == true and timeThreshold == 0 then this suffix will NEVER be appended to the tag.
      */
     private String slowSuffix = ".slow";
@@ -134,6 +134,7 @@ public class LoggingStopWatch extends StopWatch {
     /**
      * Sets whether to append normalSuffix and slowSuffix when timeThreshold &gt; 0 AND elapsedTime &gt;= timeThreshold
      * @param normalAndSlowSuffixesEnabled true enables logging extra suffixes to normal and slow events; false (default) suppresses the suffixes 
+     * @return returns LoggingStopWatch instance.
      */
     public LoggingStopWatch setNormalAndSlowSuffixesEnabled(boolean normalAndSlowSuffixesEnabled) {
 		this.normalAndSlowSuffixesEnabled = normalAndSlowSuffixesEnabled;
@@ -153,6 +154,7 @@ public class LoggingStopWatch extends StopWatch {
      * Sets the suffix to use when normalAndSlowSuffixesEnabled=true and timeThreshold &gt; 0 and elapsedTime &lt; timeThreshold.
      * Setting this to "" is equivalent to setting to null.
      * @param normalSuffix the suffix to append if normalAndSlowSuffixesEnabled and the elapsedtime is under the threshold
+     * @return returns LoggingStopWatch instance.
      */
     public LoggingStopWatch setNormalSuffix(String normalSuffix) {
     	if (normalSuffix == null || "".equals(normalSuffix)) {
@@ -175,6 +177,7 @@ public class LoggingStopWatch extends StopWatch {
      * Sets the suffix to use when normalAndSlowSuffixesEnabled=true and timeThreshold &gt;  0 and elapsedTime &gt;= timeThreshold.
      * Setting this to "" is equivalent to setting to null.
      * @param slowSuffix the suffix to append if normalAndSlowSuffixesEnabled and the elapsedtime is under the threshold
+     * @return returns LoggingStopWatch instance.
      */
     public LoggingStopWatch setSlowSuffix(String slowSuffix) {
     	if (slowSuffix == null || "".equals(slowSuffix)) {
