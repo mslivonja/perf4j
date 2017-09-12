@@ -52,6 +52,20 @@ public class StopWatch implements Serializable, Cloneable {
     private String tag;
     private String message;
 
+    private boolean isNanoPrecision = false;
+
+    public void setNanoPrecision(boolean nanoPrecision) {
+        isNanoPrecision = nanoPrecision;
+    }
+
+    public boolean isNanoPrecision() {
+        return isNanoPrecision;
+    }
+
+    private long getTimeDivider(){
+        return (this.isNanoPrecision)?1L:NANOS_IN_A_MILLI;
+    }
+
     /**
      * Creates a StopWatch with a blank tag, no message and started at the instant of creation.
      */
@@ -115,7 +129,7 @@ public class StopWatch implements Serializable, Cloneable {
      */
     public long getElapsedTime() {
         return (elapsedTime == -1L) ?
-               (System.nanoTime() - nanoStartTime) / NANOS_IN_A_MILLI :
+               (System.nanoTime() - nanoStartTime) / getTimeDivider() :
                elapsedTime;
     }
 
@@ -200,7 +214,7 @@ public class StopWatch implements Serializable, Cloneable {
      * @return this.toString(), which is a message suitable for logging
      */
     public String stop() {
-        elapsedTime = (System.nanoTime() - nanoStartTime) / NANOS_IN_A_MILLI;
+        elapsedTime = (System.nanoTime() - nanoStartTime) / getTimeDivider();
         return this.toString();
     }
 
